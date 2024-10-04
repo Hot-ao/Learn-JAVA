@@ -1,5 +1,5 @@
 package CH01;
-public class NO1{
+public class Ex01{
 	public static int sum(int i, int j) {
 		return i + j;
 	}
