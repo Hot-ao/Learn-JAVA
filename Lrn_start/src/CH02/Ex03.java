@@ -15,11 +15,33 @@ public class Ex03{
 	 	*scanner.close() : scanner 객체의 사용을 종료 - scanner 객체 종료 시 System.in도 함께 닫히므로 더 이상 System.in을 사용해 키 입력 못 받음
 	*/
 	
+	//예제2-4
+	public static void ScannerEx(){
+		System.out.println("이름,도시,나이,체중,독신여부를 빈칸으로 분리하여 입력하세요");
+		Scanner scanner = new Scanner(System.in);
+		
+		String name = scanner.next();
+		System.out.print("이름은 " + name + ",");
+		
+		String city = scanner.next();
+		System.out.print("도시는 " + city + ",");
+
+		int age = scanner.nextInt();	//정수 읽기
+		System.out.print("나이는 " + age + ",");
+		
+		double weight = scanner.nextDouble();	//실수 읽기
+		System.out.print("체중은 " + weight + ",");
+		
+		boolean isSingle = scanner.nextBoolean();	//논리값 읽기
+		System.out.print("독신 여부는 " + isSingle + ",");
+		scanner.close();
+	}
+	
 	
 	public static void main(String[] args) {
 	
-		Scanner scanner = new Scanner(System.in);
-		scanner.close();
+		ScannerEx();
+		
 	}
 	
 }
