@@ -36,9 +36,37 @@ public class Ex05{
 		scanner.close();
 	}
 	
+	//예제 2-15 : swich문 이용***
+	public static void CoffePrice() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("메뉴를 선택해주세요.");
+		String order = scanner.next();
+		
+		int price = 0;
+		
+		switch(order) {
+			case "에스프레소":
+			case "카푸치노":
+			case "카페라떼":
+				price = 3500; break;
+			case "아메리카노":
+				price = 2000; break;
+			default: System.out.println("메뉴에 없습니다.");
+		}
+		
+		if (price!=0) {
+			System.out.println(order+"의 가격은 "+price+"원입니다.");
+			scanner.close();
+			
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		//SuccessOrFail();
-		MultipleOfThree();
+		//MultipleOfThree();
+		CoffePrice();
 	}
 }
