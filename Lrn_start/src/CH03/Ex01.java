@@ -1,7 +1,7 @@
 package CH03;
 
 import java.util.Scanner;
-
+//반복문
 public class Ex01{
 	
 	//예제 3-1
@@ -68,7 +68,6 @@ public class Ex01{
 	}	
 	public static void main(String[] args) {
 	
-	//반복문
 	/*
 	 * for 문		for(초기문; 조건식; 반복 후 작업)
 	 	* 조건식이 true 혹은 빈칸 이면 무한 반복 
