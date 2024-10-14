@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ex02{
 	
-	public static void ArrayAccess(){
+	public static void ArrayAccess() {
 		Scanner sc = new Scanner(System.in);
 		int IntArray[] = new int [5];
 		int max =0;
@@ -14,6 +14,17 @@ public class Ex02{
 		}
 		System.out.println(max);
 		sc.close();
+	}
+	
+	public static void ArrayMean() {
+		Scanner sc = new Scanner(System.in);
+		int IntArray[] = new int[5];
+		double sum=0;
+		for (int i =0;i<IntArray.length;i++) {
+			int num = sc.nextInt();
+			sum += num;
+		}
+		System.out.println(sum/IntArray.length);
 		
 	}
 //배열	
@@ -25,9 +36,11 @@ public class Ex02{
 		 	* 배열 초기화 int intArray[] = {}; <-- 배열의 크기는 {} 안의 원소 개수에 따라 정해짐
 		 	* 배열 공유
 		 		* int intArray[] = new int[5];	int myArray[] = intArray; <-- myArray와 intArray가 서로 공유함
+		 	* 배열 크기 - Array.length
+
 		 */
-		ArrayAccess();
-		
+		//ArrayAccess();
+		ArrayMean();
 
 	}
 }
