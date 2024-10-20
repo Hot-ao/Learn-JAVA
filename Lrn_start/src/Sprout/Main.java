@@ -5,30 +5,28 @@ import java.util.Scanner;
 	public class Main{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		while(true) {
-			double a = sc.nextDouble();
-			double b = sc.nextDouble();
-			double c = sc.nextDouble();
-			double temp;
-			if (a==0&&b==0&&c==0) break;
-			if (a<b) {
-				temp=b;
-				b=a;
-				a=temp;
-			}
-			if (a<c) {
-				temp=a;
-				a=c;
-				c=temp;
-			}
-			if (b<c) {
-				temp=b;
-				b=c;
-				c=temp;
-			}
-			if(a*a==(b*b+c*c)) System.out.println("right");
-			
-			else System.out.println("wrong");
+		int a=sc.nextInt();		//a>b
+		int b=sc.nextInt();
+		int temp;
+		int gcd=1;
+		int lcm=1;
+		if(b>a) {			
+			temp=a;
+			a=b;
+			b=temp;
 		}
+
+		//gcd
+		for (int i=1;i<=;i++) {
+			if(a%i==0) {
+				if(b%i==0) {
+					gcd*=i;
+				}
+			}
+		}
+		lcm = a*b/gcd;
+		System.out.println(gcd);
+		System.out.println(lcm);
+		sc.close();
 	}
 }
