@@ -3,30 +3,29 @@ package Sprout;
 
 import java.util.Scanner;
 	public class Main{
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a=sc.nextInt();		//a>b
-		int b=sc.nextInt();
-		int temp;
-		int gcd=1;
-		int lcm=1;
-		if(b>a) {			
-			temp=a;
-			a=b;
-			b=temp;
+		int table[][] = new int [9][9];
+		int row=0;
+		int col=0;
+		int max=0;
+		
+		for (int i=0;i<table.length;i++) {
+			for (int j=0;j<table[i].length;j++) {
+				table[i][j] = sc.nextInt();
+			}
 		}
-
-		//gcd
-		for (int i=1;i<=;i++) {
-			if(a%i==0) {
-				if(b%i==0) {
-					gcd*=i;
+		
+		for (int i=0;i<table.length;i++) {
+			for (int j=0;j<table[i].length;j++) {
+				if(table[i][j]>=max) {
+					max = table[i][j];
+					row = i+1;
+					col = j+1;
 				}
 			}
 		}
-		lcm = a*b/gcd;
-		System.out.println(gcd);
-		System.out.println(lcm);
-		sc.close();
+		System.out.println(max);
+		System.out.println(row+" "+col);
 	}
 }
