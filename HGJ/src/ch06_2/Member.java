@@ -1,4 +1,4 @@
-package ch06;
+package ch06_2;
 
 public class Member {
 	
